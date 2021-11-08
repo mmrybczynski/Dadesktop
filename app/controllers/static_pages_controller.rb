@@ -6,4 +6,11 @@ class StaticPagesController < ApplicationController
             render 'privacy_es'
         end
     end
+
+    #def privacy
+    #    @privacy_text = Faker::Lorem.paragraphs(number: 6)
+    #end
+    def current_time
+        @nightimage = (DateTime.now.hour > 16 || DateTime.now.hour < 7)
+    end
 end
